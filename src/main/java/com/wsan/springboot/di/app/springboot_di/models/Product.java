@@ -26,7 +26,7 @@ public class Product {
         this.id = id;
     }
 
-    public String setName(){
+    public String getName(){
         return name;
     }
 
