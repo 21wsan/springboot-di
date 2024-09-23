@@ -1,6 +1,6 @@
 package com.wsan.springboot.di.app.springboot_di.models;
 
-public class Product {
+public class Product implements Cloneable{
 
     //estos son atributos
     private Long id;
@@ -42,4 +42,13 @@ public class Product {
         this.price = price;
     }
     //fin getters and setters...
+
+    @Override
+    public Object clone(){
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            return new Product(id, "name", price);
+        }
+    }
 }
